@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 // import { Bars3Icon, XMarkIcon} from "@heroicons/react";
+import {Link} from './Link'
 import Logo from "@/assets/Logo.png"
 useEffect 
 
@@ -17,10 +18,22 @@ const Navbar = (props: Props) => {
           <img alt="logo" src={Logo}/>
           <div className={`${flexBetween} w-full`}>
             <div className={`${flexBetween} gap-8 texxt-sm`}>
-              <p>Home</p>
-              <p>Benefits</p>
-              <p>Our Classes</p>
-              <p>Contact Us</p>
+              <Link 
+              page="Home" 
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}/>Home
+              <Link 
+              page="Benefits"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}/>Benefits
+              <Link 
+              page="Our Classes"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}/>Our Classes
+              <Link 
+              page="Contact Us"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}/>Contact Us
             </div>
           </div>
             <p>Sign In</p>
